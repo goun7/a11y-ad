@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a11y-ad"
+version = "0.1.0"
+description = "Browserless WCAG 4.1.2 accessible-name auditor for HTML — resolves aria labels, visible text, <label> bindings and titles, and reports every interactive element with no accessible name."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "goun7" }]
+keywords = [
+  "accessibility", "a11y", "wcag", "wcag22", "aria",
+  "accessible-name", "audit", "cli", "html", "eaa",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Text Processing :: Markup :: HTML",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/goun7/a11y-ad"
+Issues = "https://github.com/goun7/a11y-ad/issues"
+Changelog = "https://github.com/goun7/a11y-ad/blob/main/CHANGELOG.md"
+
+[project.scripts]
+a11y-ad = "a11y_ad.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
